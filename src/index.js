@@ -23,19 +23,11 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
     }).value();
     Promise.all(detailDeferreds)
       .then(function (objects) {
-        console.log('obj',objects);
         ReactDOM.render(<NewsList items={objects} />, $('#content')[0]);
       }).catch((err) => {
         console.error(err);
       });
   })
-  // .then(function (objects) {
-  //   console.log('objs', objects);
-  //   var items = _(arguments).map(function (argument) {
-  //     return argument[0];
-  //   }).value();
-  //   console.log(items);
-  // })
   .catch(function (ex) {
     console.error(ex);
   });
