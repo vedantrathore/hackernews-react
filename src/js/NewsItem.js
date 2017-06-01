@@ -5,7 +5,12 @@ import '../css/NewsItem.css';
 
 class NewsItem extends Component {
   getDomain(){
-    return url.parse(this.props.item.url).hostname;
+    if(this.props.item.url === undefined){
+      return 'Webpage not found';
+    }
+    else{
+      return url.parse(this.props.item.url).hostname;
+    }
   }
 
   getCommentLink() {
