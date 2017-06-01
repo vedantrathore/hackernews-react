@@ -1,6 +1,6 @@
 ## Hackernews in React!
 
-A clone of [Hackernews](https://news.ycombinator.com/) front page in [React](facebook.github.io/react) framework.
+A clone of [Hackernews](https://news.ycombinator.com/) front page in [React](facebook.github.io/react) framework. [Live demo](http://vedantrathore.me/hackernews-react/)
 
 It uses [create-react-app](https://github.com/facebookincubator/create-react-app) as starter code and complies to ES6 standards of JavaScript (almost).
 
