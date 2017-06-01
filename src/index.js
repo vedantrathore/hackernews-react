@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NewsItem from './js/NewsItem';
+import NewsList from './js/NewsList';
 import $ from 'jquery';
 import 'whatwg-fetch';
 
@@ -11,7 +11,7 @@ fetch('/json/items.json')
     return response.json()
   }).then(function (json) {
     console.log('items', json);
-    ReactDOM.render(<NewsItem item={json[0]} rank={1}/>, $('#content')[0]);
+    ReactDOM.render(<NewsList items={json} />, $('#content')[0]);
   }).catch(function (ex) {
     console.error(ex);
   });
